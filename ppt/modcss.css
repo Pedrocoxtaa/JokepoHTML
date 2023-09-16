@@ -1,0 +1,12 @@
+body {
+    background: rgb(127, 216, 252);
+    font: italic 15pt Arial;
+}
+
+#inst {
+    font: normal 10pt Arial;
+}
+
+#jogo {
+    font: normal 12pt Arial;
+}
