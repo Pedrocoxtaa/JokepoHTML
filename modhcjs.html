@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>123...</title>
+    <style>
+        body {
+            background: rgb(127, 216, 252);
+            font: italic 15pt Arial;
+        }
+
+        #inst {
+            font: normal 10pt Arial;
+        }
+
+        #jogo {
+            font: normal 12pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pedra, papel, tesoura</h1>
+    </header>
+    <section>
+        <div id="inst">
+            <p>✂>🧻>💎>✂</p>
+        </div>
+        <div id="jogo">
+            <select id="select">
+                <option value="1">💎</option>
+                <option value="2">🧻</option>
+                <option value="3">✂</option>
+            </select>
+            <button id="button">ESCOLHER</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; PedroProgramas</p>
+    </footer>
+    <script>
+
+        function escolher() {
+            let selecao = document.getElementById('select')
+            let valor = selecao.options[select.selectedIndex].value
+
+            const nrandom = Math.floor(Math.random() * 3) + 1
+
+            if (valor == 1) {
+                if (nrandom == 1) {
+                    alert("Empate, os dois escolheram pedra")
+                } else if (nrandom == 2) {
+                    alert("Você perdeu, seu oponente escolheu papel")
+                } else {
+                    alert("Você ganhou, seu oponente escolheu tesoura")
+                }
+            }
+            if (valor == 2) {
+                if (nrandom == 2) {
+                    alert("Empate, os dois escolheram papel")
+                } else if (nrandom == 3) {
+                    alert("Você perdeu, seu oponente escolheu tesoura")
+                } else {
+                    alert("Você ganhou, seu oponente escolheu pedra")
+                }
+            }
+            if (valor == 3) {
+                if (nrandom == 3) {
+                    alert("Empate, os dois escolheram tesoura")
+                } else if (nrandom == 1) {
+                    alert("Você perdeu, seu oponente escolheu pedra")
+                } else {
+                    alert("Você é PIKA")
+                }
+            }
+
+        }
+
+        document.getElementById('button').addEventListener('click', escolher)
+    </script>
+</body>
+
+</html>
